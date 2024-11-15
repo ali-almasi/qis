@@ -4,20 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Chapter 2 A caucus-race and a long tale | Topics in Quantum Information Science</title>
+  <title>Topics in Quantum Information Science</title>
 
     <meta name="author" content="Ali ALMASI" />
   
   <meta name="description" content="Geocomputation with R is for people who want to analyze, visualize and model geographic data with open source software. It is based on R, a statistical programming language that has powerful data processing, visualization, and geospatial capabilities. The book equips you with the knowledge and skills to tackle a wide range of issues manifested in geographic data, including those with scientific, societal, and environmental implications. This book will interest people from many backgrounds, especially Geographic Information Systems (GIS) users interested in applying their domain-specific knowledge in a powerful open source language for data science, and R users interested in extending their skills to handle spatial data." />
   <meta name="generator" content="placeholder" />
-  <meta property="og:title" content="Chapter 2 A caucus-race and a long tale | Topics in Quantum Information Science" />
+  <meta property="og:title" content="Topics in Quantum Information Science" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://github.com/ali-almasi/qis" />
+  <meta property="og:url" content="<a href="https://github.com/ali-almasi/qis" class="uri">https://github.com/ali-almasi/qis</a>" />
   
   <meta property="og:description" content="Geocomputation with R is for people who want to analyze, visualize and model geographic data with open source software. It is based on R, a statistical programming language that has powerful data processing, visualization, and geospatial capabilities. The book equips you with the knowledge and skills to tackle a wide range of issues manifested in geographic data, including those with scientific, societal, and environmental implications. This book will interest people from many backgrounds, especially Geographic Information Systems (GIS) users interested in applying their domain-specific knowledge in a powerful open source language for data science, and R users interested in extending their skills to handle spatial data." />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 A caucus-race and a long tale | Topics in Quantum Information Science" />
+  <meta name="twitter:title" content="Topics in Quantum Information Science" />
   
   <meta name="twitter:description" content="Geocomputation with R is for people who want to analyze, visualize and model geographic data with open source software. It is based on R, a statistical programming language that has powerful data processing, visualization, and geospatial capabilities. The book equips you with the knowledge and skills to tackle a wide range of issues manifested in geographic data, including those with scientific, societal, and environmental implications. This book will interest people from many backgrounds, especially Geographic Information Systems (GIS) users interested in applying their domain-specific knowledge in a powerful open source language for data science, and R users interested in extending their skills to handle spatial data." />
   
@@ -48,6 +48,10 @@
 <body data-spy="scroll" data-target="#toc">
 
 <div class="container-fluid">
+<!--bookdown:title:start-->
+<!--bookdown:title:end-->
+
+<!--bookdown:toc:start-->
 <div class="row">
   <header class="col-sm-12 col-lg-3 sidebar sidebar-book">
     <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
@@ -76,17 +80,71 @@
   </header>
 
   <main class="col-sm-12 col-md-9 col-lg-7" id="content">
-<div id="a-caucus-race-and-a-long-tale" class="section level1" number="2">
-<h1><span class="header-section-number">Chapter 2</span> A caucus-race and a long tale</h1>
-<div id="fdsdfd" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Fdsdfd</h2>
-
-
+<!--bookdown:toc:end-->
+<!--bookdown:body:start-->
+<div id="about" class="section level1 unnumbered">
+<h1 class="unnumbered">About</h1>
+<p><em>Topics in Quantum Information Science</em> is an introduction to the fascinating and rapidly growing field of quantum information science. It is written for those with a background in mathematics or theoretical computer science who are curious about exploring this field through mathematical and computational lenses.</p>
+<p>These notes do not aim to cover everything—quantum information science has grown far too vast for that. Instead, they offer a selection of topics that I have found particularly interesting in my own journey of learning.</p>
+<p>Unless stated otherwise, the results presented here are not original, and citations are provided wherever possible.</p>
+<!--chapter:end:index.Rmd-->
+</div>
+<div id="part-qinformation-theory" class="section level1 unnumbered">
+<h1 class="unnumbered">(PART) QInformation Theory</h1>
+</div>
+<div id="the-pool-of-tears" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> The pool of tears</h1>
+<p><span class="math display">\[
+a^2 + \mathbf{b}^2 = \symbf{\alpha}^2\,.  
+\]</span>
+# Tips on writing mathematics {.unnumbered #writing}</p>
+<div class="mysummary">
+<p>In the mid-semester survey, a few people suggested I could offer some clearer advice on writing mathematics well. This is a brief attempt at doing that. I may try to expand this a bit later.</p>
+</div>
+<div id="advice" class="section level2 unnumbered">
+<h2 class="unnumbered">Advice</h2>
+<p>If a maths question asks you to “State”, “Write down” or “Calculate” something, you don’t need to do any more than give the answer. But if a question asks you to “Prove”, “Show that” or “Explain”, then the marker is looking for a clearly explained answer, and will base your mark on how well you explain your solution, not just on it’s mathematical accuracy.</p>
+<p>Some things a marker might look for include:</p>
+<ul>
+<li>If you had to make your own notation, have you explained clearly what it means?</li>
+<li>If it’s a “words question”, have you clearly translated the information into mathematical notation?</li>
+<li>In your solution, do you clearly state how you know certain statements are true? (“From the question, we know that…” “From the definition of …” “Using the law of total probability…” “From Axiom 2, we see that…”)</li>
+<li>When making non-obvious algebraic manipulations, do you explain what you’re doing? (There’s usually no need – but no harm either! – in stating obvious things like “Dividing both sides by 2…”, but for less obvious things like “Recognising this as difference of two squares…” or “By the linearity of expectation…”, you should say so.)</li>
+<li>Does your solution show clearly the “direction” of the proof. (“We start with the definition of…” “We need to show that…” “Assume, seeking a contradiction, that…” “If we could show that … then this would be sufficient to give the result.” “We will bound each term in this expression separately.”)</li>
+<li>Do you write in full sentences? Even equations should (usually) include punctuation, such as ending with a full-stop if they end a sentence.</li>
+<li>An extremely rough rule of thumb – which is often, but not always, applicable – is that a good solution should be at least 50% writing and at most 50% equations.</li>
+<li>It’s usually best to avoid abbreviations and shorthand, like “LHS” (“left-hand side”), “WLOG” (“without loss of generality”), “iff” (“if and only if”), etc, although specific technical abbreviations from the course, like “PMF” (“probability mass function”) are OK. Mathematical shorthand like <span class="math inline">\(\therefore\)</span> or <span class="math inline">\(\Rightarrow\)</span> should be avoided as “word alternatives” (“So”, “Thus”, “Therefore”, “Hence”, etc, are better), but are OK in certain circumstances where they have specific technical meanings.</li>
+<li>It’s fine – and often good! – to use diagrams to aid your explanation. But a diagram is rarely sufficient by itself without some writing to explain what it shows.</li>
+</ul>
+</div>
+<div id="writing-ex" class="section level2 unnumbered">
+<h2 class="unnumbered">Examples</h2>
+<p>Here are two solutions for <a href="#P3-long">Problem Sheet 3 Question B1</a>. This first solution is a typical sort of solution I might see from a student. The second solution has exactly the same mathematical content, but is more clearly explained. Which do you think is better?</p>
+<div class="thpart">
+<p><strong>Problem Sheet 3, Question B1.</strong> <em>Suppose <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent events. Show that <span class="math inline">\(A\)</span> and <span class="math inline">\(B^\comp\)</span> are also independent events.</em></p>
+</div>
+<div class="thpart">
+<p><em>Solution 1.</em></p>
+<!--chapter:end:01-QInfo1.Rmd-->
+<div id="part-qalgorithms" class="section level1 unnumbered">
+<h1 class="unnumbered">(PART) QAlgorithms</h1>
+</div>
+<div id="the-pool-of-tears-1" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> The pool of tears</h1>
+<!--chapter:end:10-QAlgo1.Rmd-->
+</div>
+<div id="part-zx-calculus" class="section level1 unnumbered">
+<h1 class="unnumbered">(PART) ZX Calculus</h1>
+</div>
+<div id="the-pool-of-tears-2" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> The pool of tears</h1>
+<p>df</p>
+<!--chapter:end:20-ZXCalculus1.Rmd-->
 </div>
 </div>
 </div>
 </div>
-</div>
+<!--bookdown:body:end-->
   </main>
 
   <div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">

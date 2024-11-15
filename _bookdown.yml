@@ -1,7 +1,9 @@
 book_filename: qistopics
 rmd_files: 
     - "index.Rmd"
-    - "02-tears.Rmd"
+    - "01-QInfo1.Rmd"
+    - "10-QAlgo1.Rmd"
+    - "20-ZXCalculus1.Rmd"
 output_dir: docs
 delete_merged_file: true
 description: true
