@@ -1,8 +1,12 @@
-book_filename: "bookdownproj"
-output_dir: docs
+book_filename: qistopics
+rmd_files: 
+    - "index.Rmd"
+new_session: true
 delete_merged_file: true
-edit: https://github.com/ali-almasi/qis/edit/main/%s
-view: https://github.com/ali-almasi/qis/blob/main/%s
 language:
+  label:
+    fig: "FIGURE "
+    tab: "TABLE "
   ui:
+    edit: "Edit"
     chapter_name: "Chapter "
