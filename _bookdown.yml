@@ -1,8 +1,12 @@
 book_filename: qistopics
 rmd_files: 
     - "index.Rmd"
-new_session: true
+    - "02-tears.Rmd"
+output_dir: docs
 delete_merged_file: true
+description: true
+edit: https://github.com/ali-almasi/qis/edit/main/%s
+view: https://github.com/ali-almasi/qis/edit/main/%s
 language:
   label:
     fig: "FIGURE "

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 1 Classical probability I | Topics in Quantum Information Science</title>
+<meta name="author" content="Ali ALMASI">
+<meta name="description" content="1.1 Probability with equally likely outcomes Classical probability is the name we give to probability where there are a finite number of equally likely outcomes. Classical probability was the...">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="Chapter 1 Classical probability I | Topics in Quantum Information Science">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://github.com/ali-almasi/qis/L05-classical-i.html">
+<meta property="og:description" content="1.1 Probability with equally likely outcomes Classical probability is the name we give to probability where there are a finite number of equally likely outcomes. Classical probability was the...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 1 Classical probability I | Topics in Quantum Information Science">
+<meta name="twitter:description" content="1.1 Probability with equally likely outcomes Classical probability is the name we give to probability where there are a finite number of equally likely outcomes. Classical probability was the...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Lato-0.4.9/font.css" rel="stylesheet">
+<link href="libs/Roboto_Mono-0.4.9/font.css" rel="stylesheet">
+<link href="libs/Montserrat-0.4.9/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="style/style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h2>
+        <a href="index.html" title="">Topics in Quantum Information Science</a>
+      </h2>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">About These Notes (1st Edition)</a></li>
+<li><a class="active" href="L05-classical-i.html"><span class="header-section-number">1</span> Classical probability I</a></li>
+<li class="book-part">QUANTUM INFORMATION</li>
+<li><a class="" href="the-pool-of-tears.html"><span class="header-section-number">2</span> The pool of tears</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="L05-classical-i" class="section level1" number="1">
+<h1>
+<span class="header-section-number">1</span> Classical probability I<a class="anchor" aria-label="anchor" href="#L05-classical-i"><i class="fas fa-link"></i></a>
+</h1>
+<div id="classical-intro" class="section level2" number="1.1">
+<h2>
+<span class="header-section-number">1.1</span> Probability with equally likely outcomes<a class="anchor" aria-label="anchor" href="#classical-intro"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>Classical probability</strong> is the name we give to probability where there are a finite number of equally likely outcomes.</p>
+<p>Classical probability was the first type of probability to be formally studied – partly because it is the simplest, and partly because it was useful for working out how to win at gambling. Tossing fair coins, rolling dice, and dealing cards are all common gambling situations that can be studied using classical probability – in a deck of cards, for example, there are 52 cards that are equally likely to be drawn. Among the first works to seriously study classical probability were “Book on Games of Chance” by <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Cardan/">Girolamo Cardano</a> (written in 1564, but not published until 1663, one hundred years later), and a famous series of letters between <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Pascal/">Blaise Pascal</a> and <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Fermat/">Pierre de Fermat</a> in 1654.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-1" class="definition"><strong>Definition 1.1  </strong></span>Let <span class="math inline">\(\Omega\)</span> be a finite sample space. Then the <strong>classical probability measure</strong> on <span class="math inline">\(\Omega\)</span> is given by
+<span class="math display">\[ \mathbb P(A) = \frac{|A|}{|\Omega|} . \]</span></p>
+</div>
+<p>So to work out a classical probability <span class="math inline">\(\mathbb P(A)\)</span>, crucially we need to be able to count how many outcomes <span class="math inline">\(|A|\)</span> are in the event <span class="math inline">\(A\)</span> and count how many outcomes <span class="math inline">\(|\Omega|\)</span> are in the whole sample space <span class="math inline">\(\Omega\)</span>. (This is why classical probability is also called “enumerative probability” – “enumeration” is another word for counting.) In this lecture and the next, we’ll look at some different ways in which we can count the number of outcomes in common events and sample spaces.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-2" class="example"><strong>Example 1.1  </strong></span><em>We roll a dice. What is the probability we get at least 5?</em></p>
+<p>The sample space is <span class="math inline">\(\Omega = \{1,2,3,4,5,6\}\)</span>, with <span class="math inline">\(|\Omega| = 6\)</span>. The event that we roll at least 5 is <span class="math inline">\(A = \{5,6\}\)</span>, with <span class="math inline">\(|A| = 2\)</span>. Hence
+<span class="math display">\[ \mathbb P(A) = \frac{|A|}{|\Omega|} = \frac{2}{6} = \frac{1}{3} . \]</span></p>
+</div>
+<p>There’s something we ought to check before going any further!</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-3" class="theorem"><strong>Theorem 1.1  </strong></span>Let <span class="math inline">\(\Omega\)</span> be a finite nonempty sample space. Then the classical probability measure on <span class="math inline">\(\Omega\)</span>,
+<span class="math display">\[ \mathbb P(A) = \frac{|A|}{|\Omega|} , \]</span>
+is indeed a probability measure, in that it satisfies the three axioms in Definition <a href="#def:axioms"><strong>??</strong></a>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-4" class="proof"><em>Proof</em>. </span>We’ll take the axioms one by one.</p>
+<ol style="list-style-type: decimal">
+<li>Since <span class="math inline">\(|\Omega| \geq 1\)</span> and <span class="math inline">\(|A| \geq 0\)</span>, it is indeed the case that <span class="math inline">\(\mathbb P(A) = |A|/|\Omega| \geq 0\)</span>.</li>
+<li>We have <span class="math inline">\({\displaystyle \mathbb P(\Omega) = \frac{|\Omega|}{|\Omega|} = 1}\)</span>, as required.</li>
+<li>Since we have a finite sample space, we only need to show Axiom 3 for a sequence of two disjoint events; the argument can be repeated to get any finite number of events. Let <span class="math inline">\(A = \{a_1, a_2, \dots, a_k\}\)</span> and <span class="math inline">\(B = \{b_1, b_2, \dots, b_l\}\)</span> be two disjoint events with <span class="math inline">\(|A| = k\)</span> and <span class="math inline">\(|B| = l\)</span>. Note that we can enumerate the elements of the disjoint union <span class="math inline">\(C = A \cup B\)</span> as
+<span class="math display">\[ c_1 = a_1, c_2 = a_2, \dots, c_k = a_k, c_{k+1} = b_1, c_{k+2} = b_2, \dots, c_{k+l} = b_l . \]</span>
+Since <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are disjoint, this list has no repeats, and we see that <span class="math inline">\(|C| = |A \cup B| = k+l\)</span>. Hence
+<span class="math display">\[ \mathbb P(A \cup B) = \frac{k+l}{|\Omega|} = \frac{k}{|\Omega|} + \frac{l}{|\Omega|} = \mathbb P(A) + \mathbb P(B) , \]</span>
+and Axiom 3 is fulfilled.</li>
+</ol>
+</div>
+</div>
+<div id="multiplication" class="section level2" number="1.2">
+<h2>
+<span class="header-section-number">1.2</span> Multiplication principle<a class="anchor" aria-label="anchor" href="#multiplication"><i class="fas fa-link"></i></a>
+</h2>
+<p>In classical probability, to find the probability of an event <span class="math inline">\(A\)</span>, we need to count the number of outcomes in <span class="math inline">\(A\)</span> and the total number of possible outcomes in <span class="math inline">\(\Omega\)</span>. This can be easy when we’re just looking at one choice – like the 2 outcomes from tossing a single coin, the 6 outcomes of rolling a single dice, or the 52 outcomes from dealing a single card. Now we’re going to look at what happens if there are a number of choices one after another – like tossing multiple coins, rolling more than one dice, or dealing a hand of cards.</p>
+<p>Here, an important principle is the <strong>multiplication principle</strong>. The multiplication principle says that if you have <span class="math inline">\(n\)</span> choices followed by <span class="math inline">\(m\)</span> choices, than all together you have <span class="math inline">\(n \times m\)</span> total choices. You can see this by imagining the choices in a <span class="math inline">\(n \times m\)</span> grid, with the <span class="math inline">\(n\)</span> columns representing the first choice and <span class="math inline">\(m\)</span> rows representing the second choice. For example, suppose you go to a burger restaurant where there are 3 choices of burger (beefburger, chicken burger, veggie burger) and 2 choices of sides (fries, salad), then altogether there are <span class="math inline">\(3 \times 2 = 6\)</span> choices of meal.</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="25%">
+<col width="25%">
+<col width="25%">
+<col width="25%">
+</colgroup>
+<thead><tr class="header">
+<th align="center"></th>
+<th align="center">Beefburger</th>
+<th align="center">Chicken burger</th>
+<th align="center">Veggie burger</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>Fries</strong></td>
+<td align="center">1: Beefburger with fries</td>
+<td align="center">2: Chicken burger with fries</td>
+<td align="center">3: Veggie burger with fries</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Salad</strong></td>
+<td align="center">4: Beefburger with salad</td>
+<td align="center">5: Chicken burger with salad</td>
+<td align="center">6: Veggie burger with salad</td>
+</tr>
+</tbody>
+</table></div>
+<p>More generally, if you have <span class="math inline">\(m\)</span> stages of choosing, with <span class="math inline">\(n_1\)</span> choices in the first stage, then <span class="math inline">\(n_2\)</span> choices in the second stage, all the way to <span class="math inline">\(n_m\)</span> choices in the final stage, you have <span class="math inline">\(n_1 \times n_2 \times \cdots \times n_m\)</span> total choices altogether.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-5" class="example"><strong>Example 1.2  </strong></span><em>Five fair coins are tossed. What is the probability they all show the same face?</em></p>
+<p>Here, the sample space <span class="math inline">\(\Omega\)</span> is the set of all sequences of 5 coin outcomes. How many sample outcomes are in <span class="math inline">\(\Omega\)</span>? Well, the first coin can be heads or tails (2 choices); the second coin can be heads or tails (2 choices) and so on, until the fifth and final coin. So, by the multiplication principle, <span class="math inline">\(|\Omega| = 2 \times 2 \times 2 \times 2 \times 2 = 2^5 = 32\)</span>.</p>
+<p>The event we’re interested in is <span class="math inline">\(A = \{\text{HHHHH}, \text{TTTTT}\}\)</span>, the event that the faces are all the same – either all heads or all tails. This clearly has <span class="math inline">\(|A| = 2\)</span> outcomes.</p>
+<p>So the probability all five coins show the same face is
+<span class="math display">\[ \mathbb P(A) = \frac{|A|}{|\Omega|} = \frac{2}{32} = \frac{1}{16} \approx 0.06. \]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-6" class="example"><strong>Example 1.3  </strong></span><em>Four dice are rolled. What is the probability we get at least one 6?</em></p>
+<p>Here, <span class="math inline">\(\Omega\)</span> is the set of all possible sequences of four dice rolls. Clearly <span class="math inline">\(|\Omega| = 6^4 = 1296\)</span>.</p>
+<p>The event <span class="math inline">\(A\)</span> is the set of all dice roll sequences with at least one 6. Whenever you see a question with the phrase “at least one” in it, it’s very often a good idea to look at the complementary event <span class="math inline">\(A^\comp\)</span> instead. We know from <a href="#prob-properties">the last lecture</a> that <span class="math inline">\(\mathbb P(A) = 1 - \mathbb P(A^\comp)\)</span>, but in “at least one” questions, it’s often easier to count <span class="math inline">\(|A^\comp|\)</span> than to count <span class="math inline">\(|A|\)</span>.</p>
+<p>Here, since <span class="math inline">\(A\)</span> is the set of all dice roll sequences with at least one 6, then <span class="math inline">\(A^\comp\)</span> is the set of dice roll sequence without any 6s at all. This means all four dice must have rolled a 1, 2, 3, 4 or 5. Since each of the four dice rolls has five possibilities, this means that <span class="math inline">\(|A^\comp| = 5^4 = 625\)</span>.</p>
+<p>Putting this together, we see that
+<span class="math display">\[ \mathbb P(A) = 1 - \mathbb P(A^\comp) = 1 - \frac{|A^\comp|}{|\Omega|} = 1 - \frac{625}{1296} = \frac{671}{1296} \approx 0.518 .\]</span>
+So there’s about a 52% chance we get at least one 6.</p>
+</div>
+</div>
+<div id="sampling" class="section level2" number="1.3">
+<h2>
+<span class="header-section-number">1.3</span> Sampling with and without replacement<a class="anchor" aria-label="anchor" href="#sampling"><i class="fas fa-link"></i></a>
+</h2>
+<p>Probabilists love problems where they pick coloured balls out of a bag!</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-7" class="example"><strong>Example 1.4  </strong></span><em>A bag contains 15 balls: 10 black balls and 5 white balls. We draw 3 balls out of the bag. What is the probability all 3 balls are black <strong>(a)</strong> if we put each ball back into the bag after it is chosen; <strong>(b)</strong> if we do not put each ball back into the bag after it is chosen.</em></p>
+<p>Let’s start with (a). The number of ways to choose a ball out 15 on three occasions is <span class="math inline">\(|\Omega| = 15^3\)</span>. The number of ways to choose a black ball out of 10 on three occasions is <span class="math inline">\(|A| = 10^3\)</span>. Hence
+<span class="math display">\[ \mathbb P(A) = \frac{|A|}{|\Omega|} = \frac{10^3}{15^3} =  \frac{1000}{3375} = \frac{8}{27} \approx 0.30. \]</span></p>
+<p>What about (b)? Here we don’t put the ball back in the bag once it has been chosen. There are 15 ways to pick the first ball. But then there are only 14 balls left in the bag for the second choice, and only 13 balls for the third choice. So <span class="math inline">\(|\Omega| = 15\times14\times13\)</span>. Similarly, there are 10 ways the first ball can be black. But once that black ball is removed, only 9 choices for the second black ball, and only 8 for the third. So <span class="math inline">\(|A| = 10\times9\times8\)</span>. So this time we have
+<span class="math display">\[ \mathbb P(A) = \frac{|A|}{|\Omega|} = \frac{10\times9\times8}{15\times14\times13} =  \frac{720}{2730} = \frac{24}{91} \approx 0.26, \]</span>
+which is slightly smaller than the answer in part (a).</p>
+</div>
+<p>This example illustrated the difference between <strong>sampling with replacement</strong> (when the balls were put back into the bag) and <strong>sampling without replacement</strong> (when the balls were not put back). If we want to sample <span class="math inline">\(k\)</span> items from a set of <span class="math inline">\(n\)</span> items, then:</p>
+<ul>
+<li>the number of ways to sample with replacement is
+<span class="math display">\[ n^k = n\times n\times\cdots\times n;  \]</span>
+</li>
+<li>the number of ways to sample without replacement is
+<span class="math display">\[ \ff{n}{k} = n\times(n-1)\times \cdots\times (n-k+1) .\]</span>
+</li>
+</ul>
+<p>Here, we’ve defined the notation <span class="math inline">\(\ff{n}{k}\)</span> for the number of ways to sample without replacement; this is called the <strong>falling factorial</strong> or <strong>permutation number</strong>. This is still <span class="math inline">\(k\)</span> numbers multiplied together, but decreasing by 1 each time down from <span class="math inline">\(n\)</span>. The final number in the product is the number of choices in the <span class="math inline">\(k\)</span>th an final round: this is the original <span class="math inline">\(n\)</span> items minus the <span class="math inline">\(k-1\)</span> items sampled in the previous <span class="math inline">\(k-1\)</span> rounds; so the final number is <span class="math inline">\(n - (k-1) = n - k + 1\)</span>. A notation point: Notice that the subscript is underlined in the falling factorial; other notation sometimes used includes <span class="math inline">\((n)_k\)</span>, <span class="math inline">\(P(n,k)\)</span>, or <span class="math inline">\({}^nP_k\)</span>.</p>
+<p>In our balls-in-a-bag problem, the answer for sampling with replacement was <span class="math inline">\(10^3/15^3\)</span>, while the answer for sampling without replacement was <span class="math inline">\(\ff{10}{3}/\ff{15}{3}\)</span>.</p>
+<p>Next time, we will look at more classical probability problems. Do two of your friends share a birthday? Can you shuffle a deck of cards in an order that has never happened before in the history of the universe? And can you win the National Lottery?</p>
+</div>
+<div id="summary-L05" class="section level2 unnumbered">
+<h2>Summary<a class="anchor" aria-label="anchor" href="#summary-L05"><i class="fas fa-link"></i></a>
+</h2>
+<div class="mysummary">
+<ul>
+<li><span class="math inline">\(\pder{x}{t}\)</span></li>
+<li>The multiplication principle says that <span class="math inline">\(n\)</span> choices followed by <span class="math inline">\(m\)</span> choices makes <span class="math inline">\(n \times m\)</span> choices in total.</li>
+<li>Sampling <span class="math inline">\(k\)</span> objects out of <span class="math inline">\(n\)</span> with replacement gives <span class="math inline">\(n^k\)</span> choices.</li>
+<li>Sampling <span class="math inline">\(k\)</span> objects out of <span class="math inline">\(n\)</span> without replacement gives <span class="math inline">\(n^{\underline{k}} = n(n-1)\cdots(n-k+1)\)</span> choices.</li>
+</ul>
+</div>
+<p><strong>Recommended reading:</strong></p>
+<ul>
+<li>
+<a href="https://leeds.primo.exlibrisgroup.com/permalink/44LEE_INST/13rlbcs/alma991013131349705181">Stirzaker, <em>Elementary Probability</em></a>, Sections 3.1 and 3.2.</li>
+</ul>
+<!--
+::: {.example}
+*Two dice are rolled. What is the probability of getting a total score of 8?*
+
+Here, the sample space $\Omega$ is the set of all pairs of dice rolls
+\[ \Omega = \big\{ (1,1), (1, 2), (1, 2), \dots, (6,5), (6,6) \big\} . \]
+Note that all the outcomes are equally likely, so we have a classical probability problem.
+
+Because there are 6 possible values for the first dice and 6 possible values for the second dice, by the multiplication principle we have $|\Omega| = 6 \times 6 = 36$.
+
+Let $A$ be the event we roll a total of 8. We need to find $|A|$, the number of sample outcomes in $A$. We can find this simply by listing them all:
+\[ A = \big\{ (2,6), (3, 5), (4, 4), (5,3), (6,2) \big\} .\]
+We see that $|A| = 5$.
+
+Hence, the probability of getting a total of 8 is
+\[ \mathbb P(A) = \frac{|A|}{|\Omega|} = \frac{5}{36} \approx 0.14 .\]
+:::
+-->
+</div>
+</div>
+
+
+
+  <div class="chapter-nav">
+<div class="prev"><a href="index.html">About These Notes (1st Edition)</a></div>
+<div class="next"><a href="the-pool-of-tears.html"><span class="header-section-number">2</span> The pool of tears</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <h2>Work In Progress</h2>
+    <!--<p>Now is a great time to provide feedback</p>-->
+        <ul class="list-unstyled">
+<!--<li><a href="https://forms.gle/nq9RmbxJyZXQgc948">Provide feedback (5 min)</a></li>--><li><a href="https://ali-almasi.github.io/">Visit Author's Webpage 🌐</a></li>
+        </ul>
+<hr>
+<nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#L05-classical-i"><span class="header-section-number">1</span> Classical probability I</a></li>
+<li><a class="nav-link" href="#classical-intro"><span class="header-section-number">1.1</span> Probability with equally likely outcomes</a></li>
+<li><a class="nav-link" href="#multiplication"><span class="header-section-number">1.2</span> Multiplication principle</a></li>
+<li><a class="nav-link" href="#sampling"><span class="header-section-number">1.3</span> Sampling with and without replacement</a></li>
+<li><a class="nav-link" href="#summary-L05">Summary</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Topics in Quantum Information Science</strong>" was written by Ali ALMASI. It was last built on 2024-11-15.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

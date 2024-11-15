@@ -1,9 +1,10 @@
 bookdown::bs4_book:
   theme:
-    primary: "#3860b6" #links  
+    primary: "#4394ab" #links  
     base_font: 
       google: 
         family: Lato
+        wght: 400
     heading_font:
       google:
         family: Montserrat
@@ -11,9 +12,10 @@ bookdown::bs4_book:
     code_font:
       google: 
         family: Roboto Mono
-    bg: "#fefefe" # backgrounds
+    bg: "#ffffff" # backgrounds
     fg: "#000000" # fonts
   includes:
-    in_header: style/ga.html
+    in_header: 
   template: style/bs4_book.html
   css: style/style.css
+  
